@@ -6,5 +6,23 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
-.idea
-target
+# Maven
+target/
+log/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

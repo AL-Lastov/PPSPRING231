@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Изменить пользователя</title>
+</head>
+<body>
+<h1>Изменить пользователя</h1>
+
+<p>ID пользователя: <span th:text="${user.id}"></span></p>
+
+<form action="/update" method="post">
+    <!-- Скрытое поле с ID -->
+    <input type="hidden" name="id" th:value="${user.id}">
+
+    <p>
+        <label>Имя:</label><br>
+        <input type="text" name="name" th:value="${user.name}" required>
+    </p>
+
+    <p>
+        <label>Email:</label><br>
+        <input type="email" name="email" th:value="${user.email}" required>
+    </p>
+
+    <p>
+        <label>Возраст:</label><br>
+        <input type="number" name="age" th:value="${user.age}" required>
+    </p>
+
+    <p>
+        <label>Город:</label><br>
+        <input type="text" name="city" th:value="${user.city}" required>
+    </p>
+
+    <p>
+        <button type="submit">Обновить</button>
+        <a href="/">Отмена</a>
+    </p>
+</form>
+</body>
+</html>
